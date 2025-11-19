@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Assets/Styles/registro.css">
+    <title>Registro</title>
+</head>
+
+<body>
+    <main>
+        <h1>Formulario De Personal Escolar</h1>
+
+        <button id="btn-show-modal" type="button" class="btn-primary">
+            + Agregar Nueva Persona
+        </button>
+
+        <div class="tabla">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Sexo</th>
+                        <th>Cumpleaños</th>
+                        <th>Rol</th>
+                        <th>Opciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </main>
+    
+    <div id="modal-container" class="modal-oculto">
+        <div class="modal-backdrop"></div>
+        
+        <div class="modal-content">
+            <h2>Registro de estudiantes</h2>
+            <form id="registro-form">
+                <label for="Nombre">Nombre: </label>
+                <input id="Nombre" name="nombre" type="text">
+                <br>
+                <label for="Apellido">Apellido: </label>
+                <input id="Apellido" name="apellido" type="text">
+
+                <br>
+                <label for="sexo">Sexo: </label>
+                <br>
+                <input id="sex_h" value="h" name="sexo" type="radio">
+                <label for="sex_h">Hombre</label>
+                <input id="sex_m" value="m" name="sexo" type="radio">
+                <label for="sex_m">Mujer</label>
+                <input id="sex_o" value="o" name="sexo" type="radio">
+                <label for="sex_o">Otro</label>
+                <br>
+
+                <label for="fecha_nac">Fecha de nacimiento</label>
+                <br>
+                <input id="fecha_nac" type="date" name="fh_nac">
+                <br>
+
+                <label for="rol">Rol</label>
+                <br>
+                <select name="id_rol" id="rol">
+                    <option value="" selected>-- Seleccione una opción --</option>
+                    <option value="1">Estudiante</option>
+                    <option value="2">Profesor</option>
+                    <option value="3">Directivo</option>
+                    <option value="4">Administrativo</option>
+                </select>
+                <br>
+
+                <button id="btn-add" type="button">Agregar</button>
+                <button id="btn-cancAdd" type="button">Cancelar</button>
+            </form>
+        </div>
+    </div>
+    
+    <div id="global-loader" class="modal-oculto">
+        <div class="loader-content">
+            <div class="spinner"></div>
+            <p>Procesando, por favor espere...</p>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="Assets/Scripts/registro.js"></script>
+</body>
+
+</html>
